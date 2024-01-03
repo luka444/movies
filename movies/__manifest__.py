@@ -9,6 +9,7 @@
         'security/ir.model.access.csv',
         'views/menus.xml',
         'views/movies_view.xml',
+        'views/res_partner_view.xml',
     ],
     'application': True,
     'auto_install': False,

@@ -14,3 +14,6 @@ class MoviesMovies(models.Model):
     language = fields.Selection([("geo", "Geo"),("eng", "Eng")])
     image = fields.Image(string='Poster', max_width=590, max_height=590)
     rating = fields.Float()
+    actor_ids = fields.Many2many("res.partner")
+    director_id = fields.Many2one("res.users")
+    movie_budget = fields.Float(string="Budget")

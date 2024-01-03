@@ -23,10 +23,15 @@
                                 <field name="description" placeholder="Summary of the film"/>
                             </page>
                             <page string="Actors and Director">
-                                <field name="description" placeholder="Summary of the film"/>
+                                <group>
+                                    <field name="actor_ids" widget="many2many_tags" domain="[('is_actor', '=', True)]"/>
+                                    <field name="director_id"/>
+                                </group>
                             </page>
                             <page string="Budget">
-                                <field name="description" placeholder="Summary of the film"/>
+                                <group>
+                                    <field name="movie_budget"/>
+                                </group>
                             </page>
                         </notebook>
                     </group>
