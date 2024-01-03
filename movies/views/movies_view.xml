@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="movies_view_form" model="ir.ui.view">
+        <field name="name">movies.view.form</field>
+        <field name="model">movies.movies</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name" placeholder="Enter Movie's Name" style="font-size: 25px;width: 800px;"/>
+                        <group>
+                            <field name="rating"/>
+                            <field name="language"/>
+                            <field name="release_date"/>
+                            <field name="duration"/>
+                        </group>
+                        <group>
+                            <field name="image" widget='image'/>
+                        </group>
+                        <notebook>
+                            <page string="Description">
+                                <field name="description" placeholder="Summary of the film"/>
+                            </page>
+                            <page string="Actors and Director">
+                                <field name="description" placeholder="Summary of the film"/>
+                            </page>
+                            <page string="Budget">
+                                <field name="description" placeholder="Summary of the film"/>
+                            </page>
+                        </notebook>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" groups="base.group_user"/>
+                    <field name="activity_ids" />
+                    <field name="message_ids" />
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="movies_view_tree" model="ir.ui.view">
+        <field name="name">movies.view.tree</field>
+        <field name="model">movies.movies</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="rating"/>
+                <field name="duration"/>
+            </tree>
+        </field>
+    </record>
+    
+
+    <record id="movies_movies_action" model="ir.actions.act_window">
+        <field name="name">Movies</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">movies.movies</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_movies"
+              name="Movies"
+              parent="menu_movies_root"
+              action="movies_movies_action"
+              sequence="0"/>
+
+</odoo>
