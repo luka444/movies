@@ -18,3 +18,4 @@ class MoviesMovies(models.Model):
     director_id = fields.Many2one("res.partner")
     movie_budget = fields.Float(string="Budget")
     movie_income = fields.Float(string="Income")
+    video = fields.Char(string="Movie")

@@ -34,6 +34,11 @@
                                     <field name="movie_income"/>
                                 </group>
                             </page>
+                            <page string="Watch Movie">
+                                <group>
+                                    <field name="video" widget="url"/>
+                                </group>
+                            </page>
                         </notebook>
                     </group>
                 </sheet>

@@ -14,6 +14,7 @@
             <field name="movie_income">870000000</field>
             <field name="actor_ids" eval="[(6, 0, [ ref('movies.elijah_wood'),])]"/>
             <field name="director_id" ref="movies.peter_jackson"/>
+            <field name="video">https://ge.movie/movie/1284/the-lord-of-the-rings-the-fellowship-of-the-ring</field>
         </record>
 
     </data>
