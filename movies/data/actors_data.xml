@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+
+        <record id="elijah_wood" model="res.partner">
+            <field name="name">Elijah Wood</field>
+            <field name="is_actor">True</field>
+        </record>
+    
+    </data>
+</odoo>
