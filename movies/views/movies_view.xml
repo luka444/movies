@@ -13,7 +13,7 @@
                             <field name="rating"/>
                             <field name="language"/>
                             <field name="release_date"/>
-                            <field name="duration"/>
+                            <field name="duration" widget="float_time"/>
                         </group>
                         <group>
                             <field name="image" widget='image'/>
@@ -25,12 +25,13 @@
                             <page string="Actors and Director">
                                 <group>
                                     <field name="actor_ids" widget="many2many_tags" domain="[('is_actor', '=', True)]"/>
-                                    <field name="director_id"/>
+                                    <field name="director_id" domain="[('is_director', '=', True)]"/>
                                 </group>
                             </page>
-                            <page string="Budget">
+                            <page string="Budget And Income">
                                 <group>
                                     <field name="movie_budget"/>
+                                    <field name="movie_income"/>
                                 </group>
                             </page>
                         </notebook>
@@ -52,7 +53,7 @@
             <tree>
                 <field name="name"/>
                 <field name="rating"/>
-                <field name="duration"/>
+                <field name="duration" widget="float_time"/>
             </tree>
         </field>
     </record>

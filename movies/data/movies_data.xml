@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+        
+        <record id="elijah_wood" model="res.partner">
+            <field name="name">Elijah Wood</field>
+            <field name="is_actor">True</field>
+        </record>
+
+        <record id="peter_jackson" model="res.partner">
+            <field name="name">Peter Jackson</field>
+            <field name="is_director">True</field>
+        </record>
+
+        <record id="l_o_r_fellowship_of_ring" model="movies.movies">
+            <field name="name">The Lord of Rings: The Fellowship of the Ring</field>
+            <field name="release_date" eval="'2001-12-19'"/>
+            <field name="duration">2.96</field>
+            <field name="description">The future of civilization rests in the fate of the One Ring, which has been lost for centuries. Powerful forces are unrelenting in their search for it. But fate has placed it in the hands of a young Hobbit named Frodo Baggins (Elijah Wood), who inherits the Ring and steps into legend. A daunting task lies ahead for Frodo when he becomes the Ringbearer - to destroy the One Ring in the fires of Mount Doom where it was forged.</field>
+            <field name="rating">8.9</field>
+            <field name="language">geo</field>
+            <field name="image" type="base64" file="movies/static/description/LordOfTheRings-FellowshipOfTheRing.jpg"/>
+            <field name="movie_budget">93000000</field>
+            <field name="movie_income">870000000</field>
+            <field name="actor_ids" eval="[(6, 0, [ ref('movies.elijah_wood'),])]"/>
+            <field name="director_id" ref="movies.peter_jackson"/>
+        </record>
+
+    
+    </data>
+
+</odoo>

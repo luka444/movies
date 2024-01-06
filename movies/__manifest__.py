@@ -7,6 +7,7 @@
     'description': """Movies app""",
     'data':[
         'security/ir.model.access.csv',
+        'data/movies_data.xml',
         'views/menus.xml',
         'views/movies_view.xml',
         'views/res_partner_view.xml',

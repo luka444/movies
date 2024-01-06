@@ -10,6 +10,7 @@
                 <page string="Movies">
                     <group>
                         <field name="is_actor"/>
+                        <field name="is_director"/>
                     </group>
                 </page>
             </notebook>
